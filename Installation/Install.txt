@@ -1,0 +1,37 @@
+Before you read this I reccomend using Notepad++ or some things will look funny, or will paste wrong.
+1st. Download the file, copy over the folder “Scripts” to your main RunUO folder.
+(This adds the following: A item called a Mount Stone which can be added via [add MountStone, 
+a mobile called “Mount” which can be also added via [add Mount. (DO NOT USE “Mount” in the real world, 
+it’s like an unstable ethereal when not used with stone)
+
+2nd. Back up your \Scripts\Mobiles\PlayerMobile.cs!! I will not be responsible for damages done to your shard.
+(These edits make the mount disappear on dismount and beforedeath)
+
+3rd. Add the following to your PlayerMobile.cs:
+Find base.OnDoubleClick ( from ); 
+Add before:
+			//MountingStone
+            if( this == from && (!DisableDismountInWarmode || !Warmode) )
+            {
+                IMount mount = Mount;
+ 
+                if( mount != null )
+                {
+                    mount.Rider = null;
+                    if (mount is Mount) ((Mount)mount).Delete(); // Or you can use Kill() instead of Delete() if you want a llama's corpse.
+                    return;
+                }
+            }
+ 
+            if( CanPaperdollBeOpenedBy( from ) )
+                DisplayPaperdollTo( from );
+			//MountingStone
+
+Find: return base.OnBeforeDeath();
+Add before:
+			//MountingStone
+			IMount mount = this.Mount;
+			if (mount != null)
+				mount.Rider = null;
+			if (mount is Mount) ((Mobile)mount).Delete();
+			//MountingStone
