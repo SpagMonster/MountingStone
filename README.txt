@@ -4,3 +4,5 @@ Modifications to PlayerMobile will be needed, as well as modifications to other
 dismount methods.
 
 RECCOMENDED: DOWNLOAD FROM 'Downloads' section! Includes zip.
+
+Thanks to Lokai with help with dismounting on doubleclick
