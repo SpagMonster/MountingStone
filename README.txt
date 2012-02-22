@@ -2,3 +2,5 @@ Welcome to the OFFICAL MountingStone git page, up-to-date with the most recent c
 Currently MountingStone is shown to work on RUNUO 2.1/2.2 
 Modifications to PlayerMobile will be needed, as well as modifications to other
 dismount methods.
+
+RECCOMENDED: DOWNLOAD FROM 'Downloads' section! Includes zip.
