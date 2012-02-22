@@ -1,8 +1,8 @@
 Before you read this I reccomend using Notepad++ or some things will look funny, or will paste wrong.
-1st. Download the file, copy over the folder “Scripts” to your main RunUO folder.
+1st. Download the file, copy over the folder ï¿½Scriptsï¿½ to your main RunUO folder.
 (This adds the following: A item called a Mount Stone which can be added via [add MountStone, 
-a mobile called “Mount” which can be also added via [add Mount. (DO NOT USE “Mount” in the real world, 
-it’s like an unstable ethereal when not used with stone)
+a mobile called ï¿½Mountï¿½ which can be also added via [add Mount. (DO NOT USE ï¿½Mountï¿½ in the real world, 
+itï¿½s like an unstable ethereal when not used with stone)
 
 2nd. Back up your \Scripts\Mobiles\PlayerMobile.cs!! I will not be responsible for damages done to your shard.
 (These edits make the mount disappear on dismount and beforedeath)
@@ -10,7 +10,7 @@ it’s like an unstable ethereal when not used with stone)
 3rd. Add the following to your PlayerMobile.cs:
 Find base.OnDoubleClick ( from ); 
 Add before:
-			//MountingStone
+		//MountingStone
             if( this == from && (!DisableDismountInWarmode || !Warmode) )
             {
                 IMount mount = Mount;
@@ -25,7 +25,7 @@ Add before:
  
             if( CanPaperdollBeOpenedBy( from ) )
                 DisplayPaperdollTo( from );
-			//MountingStone
+		//MountingStone
 
 Find: return base.OnBeforeDeath();
 Add before:
