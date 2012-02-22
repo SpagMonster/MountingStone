@@ -6,3 +6,5 @@ dismount methods.
 RECCOMENDED: DOWNLOAD FROM 'Downloads' section! Includes zip.
 
 Thanks to Lokai with help with dismounting on doubleclick
+
+Note: this is open-source however, I require that my name be mentioned on edited scripts AND that those files have a linkto here.
